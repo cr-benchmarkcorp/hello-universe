@@ -55,10 +55,10 @@ This closes a typical gap where an operating system is installed, but not config
 
 
 ## Version Specific File Names
-| Name | Description |
-|------|-------------|
-| ks7.cfg | Kickstart file for RHEL7 |
-| ks8.cfg | Kickstart file for RHEL8 |
+| Name           | Description                      | Resulting Linux Build-time name|
+|----------------|----------------------------------|--------------------------------|
+| ks7.pkrtpl.hcl | Kickstart HCL template for RHEL7 | ks7.cfg                        |
+| ks8.pkrtpl.hcl | Kickstart HCL template for RHEL7 | ks8.cfg                        |            
 
 
 ## HCL Kickstart Templating
@@ -77,7 +77,7 @@ During build time, Hashicorp's Packer will find and replace these values using t
 "/ks7.cfg" = templatefile("kickstart/ks7.pkrtpl.hcl", { rhelusername = var.rhelusername, rhelpassword = var.rhelpassword, rhel7_hostname = var.rhel7hostname })
 ```
 
-The templated variables ${rhelusername} and ${rhelpassword} are then replaced by the Packer variables.
+The templated variables ${rhelusername} and ${rhelpassword} are then replaced by the Packer variables, and the resulting kickstart file in this example will be named "ks7.cfg".
 
 ## Helpful Links
 
@@ -88,5 +88,7 @@ The templated variables ${rhelusername} and ${rhelpassword} are then replaced by
 [Red Hat RHEL 7 Kickstart Syntax Reference](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-kickstart-syntax)
 
 [Red Hat RHEL 8 Kickstart Documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/performing_an_advanced_rhel_installation/performing_an_automated_installation_using_kickstart)
+
+[Red Hat RHEL 8 Kickstart Syntax Reference](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/performing_an_advanced_rhel_installation/kickstart-commands-and-options-reference_installing-rhel-as-an-experienced-user)
 
 [OSCAP Anaconda Addon](https://www.open-scap.org/tools/oscap-anaconda-addon/)
