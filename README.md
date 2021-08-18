@@ -64,7 +64,7 @@ This closes a typical gap where an operating system is installed, but not config
 ## HCL Kickstart Templating
 Normally kickstart files would end in <filename>.cfg.   As you can see from above, the kick start files are HCL templates in the format <filename>.pkrtpl.hcl.    Packer will automatically use these files and substitute build-specific and sensitive values in during the build.
 
-###Template Format
+### Template Format
 Inside the <filename>.pkrtpl.hcl files you will notice the occurance of ${variable} in the configuration.
 
 Eg: 
