@@ -55,7 +55,7 @@ This closes a typical gap where an operating system is installed, but not config
 
 
 ## Version Specific File Names
-| Name           | Description                      | Resulting Linux Build-time name|
+| Name           | Description                      | Runtime (emphemeral)           |
 |----------------|----------------------------------|--------------------------------|
 | ks7.pkrtpl.hcl | Kickstart HCL template for RHEL7 | ks7.cfg                        |
 | ks8.pkrtpl.hcl | Kickstart HCL template for RHEL7 | ks8.cfg                        |            
